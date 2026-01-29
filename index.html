@@ -3,36 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mi Perfil</title>
-  <meta name="description" content="Mis enlaces oficiales" />
-  <meta name="theme-color" content="#111827" />
+  <title>Odell Pelaez | Toyota Broker</title>
+  <meta name="description" content="Odell Pelaez – Toyota Broker. Contacto directo y redes sociales." />
+  <meta name="theme-color" content="#b91c1c" />
+
   <style>
     :root{
-      --bg: #0b1220;
-      --card: rgba(255,255,255,.08);
-      --card2: rgba(255,255,255,.06);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.72);
+      --bg: #050505;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.04);
+      --text: rgba(255,255,255,.95);
+      --muted: rgba(255,255,255,.7);
       --stroke: rgba(255,255,255,.14);
-      --accent: #F97316;   /* naranja */
-      --accent2:#60A5FA;   /* azul */
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --accent: #b91c1c;  /* Toyota Red */
+      --accent2:#ef4444;  /* Red glow */
+      --shadow: 0 20px 60px rgba(0,0,0,.6);
       --radius: 18px;
       --max: 520px;
-      --btnH: 54px;
+      --btnH: 56px;
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
 
     *{box-sizing:border-box}
+
     body{
       margin:0;
       min-height:100vh;
       font-family:var(--font);
       color:var(--text);
       background:
-        radial-gradient(1200px 600px at 20% 0%, rgba(96,165,250,.22), transparent 55%),
-        radial-gradient(900px 600px at 90% 30%, rgba(249,115,22,.18), transparent 60%),
-        radial-gradient(900px 700px at 40% 110%, rgba(255,255,255,.06), transparent 60%),
+        radial-gradient(900px 500px at 20% 0%, rgba(239,68,68,.25), transparent 55%),
+        radial-gradient(900px 600px at 80% 20%, rgba(185,28,28,.22), transparent 60%),
         var(--bg);
       display:flex;
       align-items:center;
@@ -40,10 +41,7 @@
       padding:22px;
     }
 
-    .wrap{
-      width:100%;
-      max-width:var(--max);
-    }
+    .wrap{width:100%;max-width:var(--max)}
 
     .card{
       background: linear-gradient(180deg, var(--card), var(--card2));
@@ -54,20 +52,8 @@
     }
 
     .top{
-      padding:22px 22px 14px;
+      padding:22px;
       position:relative;
-    }
-
-    .shine{
-      position:absolute;
-      inset:-60px -40px auto auto;
-      width:220px;
-      height:220px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), transparent 60%);
-      filter: blur(2px);
-      opacity:.55;
-      pointer-events:none;
-      transform: rotate(10deg);
     }
 
     .profile{
@@ -77,34 +63,27 @@
     }
 
     .avatar{
-      width:72px;
-      height:72px;
+      width:78px;
+      height:78px;
       border-radius:22px;
       border:1px solid var(--stroke);
       background:
-        linear-gradient(135deg, rgba(249,115,22,.22), rgba(96,165,250,.18)),
-        rgba(255,255,255,.06);
+        linear-gradient(135deg, rgba(185,28,28,.6), rgba(0,0,0,.8));
       display:grid;
       place-items:center;
-      overflow:hidden;
+      font-weight:900;
+      font-size:1.2rem;
+      letter-spacing:.5px;
       flex:0 0 auto;
-      position:relative;
-    }
-
-    .avatar img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
     }
 
     .name{
       margin:0;
-      font-size:1.2rem;
+      font-size:1.35rem;
       line-height:1.1;
-      letter-spacing:.2px;
     }
-    .handle{
+
+    .role{
       margin:6px 0 0;
       color:var(--muted);
       font-size:.95rem;
@@ -115,21 +94,27 @@
       align-items:center;
       gap:8px;
       margin-top:12px;
-      padding:8px 12px;
+      padding:8px 14px;
       border-radius:999px;
       border:1px solid var(--stroke);
-      background: rgba(0,0,0,.18);
-      color:var(--muted);
+      background: rgba(0,0,0,.35);
       font-size:.9rem;
     }
+
     .dot{
-      width:8px;height:8px;border-radius:99px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 3px rgba(255,255,255,.06);
+      width:8px;height:8px;border-radius:50%;
+      background: var(--accent2);
+      box-shadow: 0 0 10px rgba(239,68,68,.8);
+    }
+
+    .divider{
+      height:1px;
+      background: rgba(255,255,255,.12);
+      margin: 0 18px 14px;
     }
 
     .links{
-      padding: 10px 18px 18px;
+      padding: 6px 18px 18px;
       display:flex;
       flex-direction:column;
       gap:12px;
@@ -141,21 +126,20 @@
       align-items:center;
       justify-content:space-between;
       gap:14px;
-      padding: 0 14px 0 16px;
+      padding: 0 16px;
       border-radius: var(--radius);
       border:1px solid var(--stroke);
-      background: rgba(0,0,0,.16);
+      background: rgba(0,0,0,.35);
       color: var(--text);
       text-decoration:none;
       transition: transform .12s ease, background .12s ease, border-color .12s ease;
-      will-change: transform;
     }
+
     .btn:hover{
       transform: translateY(-1px);
-      background: rgba(0,0,0,.22);
-      border-color: rgba(255,255,255,.22);
+      background: rgba(0,0,0,.55);
+      border-color: rgba(239,68,68,.6);
     }
-    .btn:active{ transform: translateY(0px) scale(.99); }
 
     .left{
       display:flex;
@@ -165,80 +149,43 @@
     }
 
     .ico{
-      width:34px;height:34px;border-radius:12px;
+      width:36px;height:36px;border-radius:12px;
       border:1px solid var(--stroke);
       display:grid;
       place-items:center;
-      background: linear-gradient(135deg, rgba(249,115,22,.16), rgba(96,165,250,.12));
+      background: linear-gradient(135deg, rgba(185,28,28,.5), rgba(0,0,0,.8));
       flex:0 0 auto;
     }
 
-    .label{
-      font-weight:600;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
+    .label{font-weight:600}
     .sub{
       display:block;
       font-size:.82rem;
       margin-top:2px;
       color: var(--muted);
-      font-weight:500;
-    }
-
-    .arrow{
-      width:30px;height:30px;border-radius:12px;
-      border:1px solid var(--stroke);
-      display:grid;
-      place-items:center;
-      background: rgba(255,255,255,.06);
-      flex:0 0 auto;
     }
 
     .footer{
       padding: 0 18px 18px;
       color: rgba(255,255,255,.55);
-      font-size:.82rem;
+      font-size:.8rem;
       text-align:center;
-    }
-
-    /* Separador opcional */
-    .divider{
-      height:1px;
-      background: rgba(255,255,255,.10);
-      margin: 0 18px 14px;
-    }
-
-    /* Modo impresión / screenshots */
-    @media (prefers-reduced-motion: reduce){
-      .btn{transition:none}
     }
   </style>
 </head>
 
 <body>
   <main class="wrap">
-    <section class="card" aria-label="Perfil y enlaces">
+    <section class="card">
       <div class="top">
-        <div class="shine"></div>
-
         <div class="profile">
-          <div class="avatar" aria-label="Avatar">
-            <!-- OPCIÓN A: pon tu foto en el mismo folder y cambia src -->
-            <!-- <img src="avatar.jpg" alt="Foto de perfil"> -->
-
-            <!-- OPCIÓN B: sin foto (iniciales) -->
-            <span style="font-weight:800; font-size:1.1rem; opacity:.9;">SE</span>
-          </div>
-
-          <div style="min-width:0">
-            <h1 class="name">Tu Nombre / Marca</h1>
-            <p class="handle">@tuusuario • Ciudad</p>
-
+          <div class="avatar">OP</div>
+          <div>
+            <h1 class="name">Odell Pelaez</h1>
+            <p class="role">Toyota Broker • Hollywood, FL</p>
             <div class="pill">
               <span class="dot"></span>
-              <span>Toque NFC para abrir</span>
+              <span>Toca el NFC para contactar</span>
             </div>
           </div>
         </div>
@@ -246,72 +193,65 @@
 
       <div class="divider"></div>
 
-      <nav class="links" aria-label="Enlaces principales">
+      <nav class="links">
 
-        <!-- BOTÓN 1 -->
-        <a class="btn" href="https://instagram.com/tuusuario" target="_blank" rel="noopener">
+        <a class="btn" href="tel:+17867705682">
           <span class="left">
-            <span class="ico" aria-hidden="true">📸</span>
-            <span style="min-width:0">
+            <span class="ico">📞</span>
+            <span>
+              <span class="label">Llamar</span>
+              <span class="sub">(786) 770-5682</span>
+            </span>
+          </span>
+        </a>
+
+        <a class="btn" href="mailto:odellgilbertop@gmail.com">
+          <span class="left">
+            <span class="ico">✉️</span>
+            <span>
+              <span class="label">Email</span>
+              <span class="sub">odellgilbertop@gmail.com</span>
+            </span>
+          </span>
+        </a>
+
+        <a class="btn" target="_blank"
+           href="https://www.google.com/maps/search/?api=1&query=1841+N+State+Rd+7+Hollywood+FL+33021">
+          <span class="left">
+            <span class="ico">📍</span>
+            <span>
+              <span class="label">Ubicación</span>
+              <span class="sub">1841 N State Rd 7, Hollywood FL</span>
+            </span>
+          </span>
+        </a>
+
+        <a class="btn" target="_blank"
+           href="https://www.instagram.com/odell_g_pelaez">
+          <span class="left">
+            <span class="ico">📸</span>
+            <span>
               <span class="label">Instagram</span>
-              <span class="sub">Fotos, reels y novedades</span>
+              <span class="sub">@odell_g_pelaez</span>
             </span>
           </span>
-          <span class="arrow" aria-hidden="true">↗</span>
         </a>
 
-        <!-- BOTÓN 2 -->
-        <a class="btn" href="https://wa.me/1TU_NUMERO?text=Hola%20vengo%20del%20llavero%20NFC" target="_blank" rel="noopener">
+        <a class="btn" target="_blank"
+           href="https://www.tiktok.com/@alvarezf80">
           <span class="left">
-            <span class="ico" aria-hidden="true">💬</span>
-            <span style="min-width:0">
-              <span class="label">WhatsApp</span>
-              <span class="sub">Escríbeme directo</span>
-            </span>
-          </span>
-          <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <!-- BOTÓN 3 -->
-        <a class="btn" href="https://tiktok.com/@tuusuario" target="_blank" rel="noopener">
-          <span class="left">
-            <span class="ico" aria-hidden="true">🎵</span>
-            <span style="min-width:0">
+            <span class="ico">🎵</span>
+            <span>
               <span class="label">TikTok</span>
-              <span class="sub">Videos cortos</span>
+              <span class="sub">@alvarezf80</span>
             </span>
           </span>
-          <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <!-- BOTÓN 4 -->
-        <a class="btn" href="https://tu-dominio.com/catalogo" target="_blank" rel="noopener">
-          <span class="left">
-            <span class="ico" aria-hidden="true">🛒</span>
-            <span style="min-width:0">
-              <span class="label">Catálogo / Tienda</span>
-              <span class="sub">Productos y precios</span>
-            </span>
-          </span>
-          <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <!-- BOTÓN 5 -->
-        <a class="btn" href="mailto:tucorreo@email.com" target="_blank" rel="noopener">
-          <span class="left">
-            <span class="ico" aria-hidden="true">✉️</span>
-            <span style="min-width:0">
-              <span class="label">Correo</span>
-              <span class="sub">tucorreo@email.com</span>
-            </span>
-          </span>
-          <span class="arrow" aria-hidden="true">↗</span>
         </a>
 
       </nav>
 
       <p class="footer">
-        © <span id="year"></span> • Hecho para llaveros NFC • Sin cuentas • Sin apps
+        © <span id="year"></span> • Toyota Style • NFC Contact Card
       </p>
     </section>
   </main>
